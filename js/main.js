@@ -12,23 +12,25 @@ while (numBombe.length < 16) {
     }
 }
 
-console.log(numBombe);
-
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100; 
 //L’utente non può inserire più volte lo stesso numero.
-
-
-
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
-
-
-
 // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
+var numeriGiocati = [];
 
-
-
-// Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
-
+while (numeriGiocati.length < 84) {
+    var numero = parseInt(prompt("inserire un numero da 1 a 100; BUONA FORTUNA!"));
+    if (numBombe.includes(numero) == false) {
+        numeriGiocati.push(numero);
+    } 
+    else {
+        break
+    }
+}
+console.log("SEI ESPLOSO!")
+console.log("Il tuo punteggio e di: " + numeriGiocati.length) + 1;
+console.log("I tuoi numeri vincenti sono: " + numeriGiocati);
+console.log("i numeri bomba sono: " + numBombe);
 
 
 // BONUS: (da fare solo se funziona tutto il resto)
