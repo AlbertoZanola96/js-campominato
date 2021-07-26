@@ -1,7 +1,18 @@
 // Il computer deve generare 16 numeri casuali (le nostre bombe) tra 1 e 100; 
 //I numeri non possono essere duplicati.
+var numBombe = [];
+function bombe(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;   
+}
 
+while (numBombe.length < 16) {
+    var numeroBomba = bombe(1, 100);
+    if(numBombe.includes(numeroBomba) == false) {
+      numBombe.push(numeroBomba);
+    }
+}
 
+console.log(numBombe);
 
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100; 
 //L’utente non può inserire più volte lo stesso numero.
