@@ -19,13 +19,18 @@ while (numBombe.length < 16) {
 var numeriGiocati = [];
 
 while (numeriGiocati.length < 84) {
+    
     var numero = parseInt(prompt("inserire un numero da 1 a 100; BUONA FORTUNA!"));
-    if (numBombe.includes(numero) == false) {
-        numeriGiocati.push(numero);
-    } 
-    else {
-        break
+    if (numeriGiocati.includes(numero) == false) {
+        if (numBombe.includes(numero) == false) {
+            numeriGiocati.push(numero);
+        } 
+        else {
+            break
+        }
     }
+    
+    
 }
 console.log("SEI ESPLOSO!")
 console.log("Il tuo punteggio e di: " + numeriGiocati.length) + 1;
