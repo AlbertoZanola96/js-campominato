@@ -60,4 +60,11 @@ function creaRecinto (celle) {
     }   
 }
 
+document.getElementById("recinto").addEventListener("click",
+    function(e) {
+        console.log(e.target.dataset.cella);
+        let element = document.querySelectorAll("[data-cella='" + e.target.dataset.cella + "']");
+    }
+)
+
 creaRecinto(100);
