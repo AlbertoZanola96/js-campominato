@@ -28,10 +28,9 @@ while (numeriGiocati.length < 84) {
         else {
             break
         }
-    }
-    
-    
+    }   
 }
+
 console.log("SEI ESPLOSO!")
 console.log("Il tuo punteggio e di: " + numeriGiocati.length) + 1;
 console.log("I tuoi numeri vincenti sono: " + numeriGiocati);
@@ -43,3 +42,22 @@ console.log("i numeri bomba sono: " + numBombe);
 // con difficoltà 0 => tra 1 e 100
 // con difficoltà 1 => tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
+
+
+
+//grafica
+function creaRecinto (celle) {
+    
+    for (let i = 1; i <= 100; i++) {
+        let cella= `
+            <div data-cella="${i}" class="cella"></div>
+        `;
+
+        let templateCella = document.createElement("div");
+        templateCella.classList.add("square");
+        templateCella.innerHTML = cella;
+        document.getElementById("recinto").appendChild(templateCella);
+    }   
+}
+
+creaRecinto(100);
